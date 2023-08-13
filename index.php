@@ -1,4 +1,6 @@
-<?php include('company/header.php'); ?>
+<?php include('header.php'); ?>
+
+
 
 <div class="container">
   <div class="row justify-content-center"> <!-- This class will center its children horizontally -->
@@ -11,27 +13,23 @@
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
         <input type="text" class="form-control" id="username" name="username">
+        <div id="u_login_error" style="color: red;"></div>
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password" name="password">
+        <div id="p_login_error" style="color: red;"></div>
       </div>
       <button type="submit" class="btn btn-primary" name="login">Log In</button>
     </form>
   </div>
-  <div id="login_error" style="color: red;"></div>
+  
 </div>
 
-
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-auto">
-          <p>you can use:</p>
-          <p> username: guest</p>
-          <p>password: guest</p>
-        </div>
-    </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="login_script.js"></script>
+
 
 <?php
 
@@ -48,4 +46,3 @@
 
 
 
-<?php include('comapny/footer.php'); ?>

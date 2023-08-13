@@ -11,19 +11,7 @@ if(isset($_POST['login']))
 
 
 
-  // Prepare a SQL statement to fetch the user's data from the database
-  //$query = "SELECT * FROM users WHERE username = `$username`";
-  // $result = mysqli_query($conn, $query);
 
-  // if(mysqli_num_rows($result)===1)
-  // {
-  //   session_start();
-  //   $_SESSION['auth']='true';
-  //   header('location:company.php');
-  // }else
-  // {
-  //   header('location:index.php');
-  // }
   $sql = "SELECT * FROM users WHERE username = ?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("s", $username);
