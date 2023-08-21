@@ -47,19 +47,12 @@ if (isset($_POST['add_employee']))
 	$e_salary = $_POST['e_salary'];
 	$e_dob = $_POST['e_dob'];
 	$e_company = $_POST['e_company'];
-	echo($e_name);
-	echo($e_salary);
-	echo($e_dob);
-	echo($e_company);
-	echo "aaxa ata ta2";
 	$query = "insert into `Employee`(`name`,`salary`,`dateOfBirth`,`company`)values('$e_name','$e_salary','$e_dob','$e_company')";
-	echo "aaxa ata ta3";
 
-	ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 	$result =mysqli_query($conn,$query);
-	echo "aaxa ata ta4";
 	if(!$result)
 	{
 		die("Query Failed".mysqli_error());
